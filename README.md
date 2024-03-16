@@ -33,7 +33,7 @@ npm start
 
 ## Help
 
-For any issues or questions, please contact [support@example.com](mailto:aanand.py@gmail.com).
+For any issues or questions, please contact [aanand.py@gmail.com](mailto:aanand.py@gmail.com).
 
 ## Authors
 
