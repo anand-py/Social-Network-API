@@ -15,7 +15,7 @@ This project is a simple social networking API developed using Node.js, Express.
 ### Installing
 
 1. Clone the repository:
-git clone [https://github.com/your-username/social-network-api.git](https://github.com/anand-py/Social-Network-API.git)
+git clone [https://github.com/anand-py/Social-Network-API.git](https://github.com/anand-py/Social-Network-API)
  
 2. Navigate to the project directory:
 cd social-network-api
