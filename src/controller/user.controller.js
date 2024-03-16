@@ -36,6 +36,7 @@ exports.login = async (req, res) => {
     }
     const token = jwt.sign({ userId: user._id }, process.env.SECERET_KEY, { expiresIn: '1h' });
     res.status(200).send({
+      id : user._id,
       username  :  user.username,
       bio : user.bio,
       profilePictureUrl : user.profilePictureUrl,
