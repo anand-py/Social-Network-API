@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/user.routes');
+const postRoutes = require('./routes/post.routes')
 
 require('dotenv').config();
 const app = express();
@@ -22,8 +23,15 @@ db.once('open', () => {
 
 // Routes
 app.use('/api/users', userRoutes);
+app.use('/api/posts', postRoutes);
 
 // Start the server
+
+const User = require('./models/user.model');
+
+
+
+
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running`);
