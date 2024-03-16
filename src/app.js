@@ -2,7 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/user.routes');
-const postRoutes = require('./routes/post.routes')
+const postRoutes = require('./routes/post.routes');
+const followRoutes = require('./routes/follow.routes')
 
 require('dotenv').config();
 const app = express();
@@ -24,6 +25,7 @@ db.once('open', () => {
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
+app.use('/api/follow', followRoutes)
 
 // Start the server
 

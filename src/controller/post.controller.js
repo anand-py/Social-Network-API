@@ -1,9 +1,16 @@
 const Post = require('../models/post.model');
 
+
 exports.createPost = async (req, res) => {
   try {
     const { text } = req.body;
-    const newPost = await Post.create({ userId: req.userData.userId, text });
+    
+    if (!req.userData || !req.userData.userId) {
+      return res.status(400).json({ error: 'User data with userId is missing in the request' });
+    }
+
+    const { userId } = req.userData;
+    const newPost = await Post.create({ userId, text });
     res.status(201).json(newPost);
   } catch (error) {
     res.status(500).json({ error: error.message });
